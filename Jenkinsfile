@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh '''
                     curl -sSL https://qlty.sh | sh
-                    qlty coverage publish coverage/coverage.json
+                    ~/.qlty/bin/qlty coverage publish coverage/coverage.json
                 '''
             }
         }
