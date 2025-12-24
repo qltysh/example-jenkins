@@ -22,7 +22,6 @@ pipeline {
                 // This assumes Ruby is available on the Jenkins agent
                 sh '''
                     ruby --version
-                    gem install bundler --no-document
                 '''
             }
         }
