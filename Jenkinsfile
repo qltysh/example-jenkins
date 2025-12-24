@@ -1,12 +1,10 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('0 0 * * *')  // Daily at midnight, same as GitHub Action schedule
-    }
-
     environment {
-        RUBY_VERSION = '3.1'
+        GEM_HOME = "${WORKSPACE}/.gem"
+        PATH = "${WORKSPACE}/.gem/bin:${env.PATH}"
+        BUNDLE_PATH = "${WORKSPACE}/vendor/bundle"
     }
 
     stages {
