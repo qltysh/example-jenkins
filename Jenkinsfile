@@ -5,6 +5,7 @@ pipeline {
         GEM_HOME = "${WORKSPACE}/.gem"
         PATH = "${WORKSPACE}/.gem/bin:${env.PATH}"
         BUNDLE_PATH = "${WORKSPACE}/vendor/bundle"
+        QLTY_COVERAGE_TOKEN = credentials('qlty-coverage-token')
     }
 
     stages {
