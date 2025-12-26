@@ -15,12 +15,6 @@ pipeline {
             }
         }
 
-        stage('Debug') {
-            steps {
-                sh 'printenv | sort'
-            }
-        }
-
         stage('Setup Ruby') {
             steps {
                 // Install Ruby using rbenv or rvm if available, or use a Ruby Docker image
